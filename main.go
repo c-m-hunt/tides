@@ -1,10 +1,9 @@
 package main
 
 import (
-	"github.com/c-m-hunt/tides/pkg/tides"
+	"github.com/c-m-hunt/tides/cmd"
 )
 
 func main() {
-	dt := tides.GetTides()
-	dt.Display()
+	cmd.Execute()
 }

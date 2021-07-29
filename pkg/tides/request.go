@@ -22,7 +22,7 @@ type Tide struct {
 func GetTides() Tides {
 	res, err := http.Get("https://www.tidetime.org/europe/united-kingdom/leigh-on-sea.htm")
 	if err != nil {
-		log.Fatal(err)
+		log.Fatal("Could not retrieve tides data")
 	}
 	defer res.Body.Close()
 	if res.StatusCode != 200 {
